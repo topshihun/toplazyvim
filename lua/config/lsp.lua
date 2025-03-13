@@ -13,7 +13,7 @@ require("lspconfig")["tinymist"].setup {
 }
 
 -- c/c++
-require("lspconfig")["clangd"].setup {}
+-- require("lspconfig")["clangd"].setup {}
 
 -- verilog/systemverilog
-require("lspconfig")["svls"].setup {}
+-- require("lspconfig")["svls"].setup {}

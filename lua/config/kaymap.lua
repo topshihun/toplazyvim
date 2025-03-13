@@ -13,7 +13,7 @@ map("n", "<C-l>", "<C-w>l", opt)
 map({"n", "i"}, "<C-s>", "<esc><Cmd>w<CR>", {silent = true})
 
 -- nvimtree
-map({"n", "i"}, "<Tab>", "<Cmd>NvimTreeToggle<CR>", opt)
+-- map({"n", "i"}, "<Tab>", "<Cmd>NvimTreeToggle<CR>", opt)
 
 -- fast quit
-map({"n", "i"}, "<Leader>q", "<Cmd>qa<CR>", {silent = true})
+map("n", "<Leader>q", "<Cmd>qa<CR>", {silent = true})
