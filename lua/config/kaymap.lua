@@ -12,4 +12,8 @@ map("n", "<C-l>", "<C-w>l", opt)
 -- fast sava
 map({"n", "i"}, "<C-s>", "<esc><Cmd>w<CR>", {silent = true})
 
--- map("n", "<Tab>", ":NvimTreeToggle", opt)
+-- nvimtree
+map({"n", "i"}, "<Tab>", "<Cmd>NvimTreeToggle<CR>", opt)
+
+-- fast quit
+map({"n", "i"}, "<Leader>q", "<Cmd>qa<CR>", {silent = true})

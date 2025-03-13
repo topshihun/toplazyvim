@@ -1,5 +1,5 @@
-require("config.lazy")
 require("config.kaymap")
+require("config.lazy")
 require("config.lsp")
 
 -- 编码方式 utf8
