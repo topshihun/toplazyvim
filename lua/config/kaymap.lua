@@ -25,3 +25,16 @@ function set_lsp_keymap(bufnr)
   vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { buffer = bufnr, silent = true })
   vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", { buffer = bufnr, silent = true })
 end
+
+-- cmp
+function set_cmp_keymap(cmp)
+return {
+  ['<C-j>'] = cmp.mapping.select_next_item(),
+  ['<C-k>'] = cmp.mapping.select_prev_item(),
+  ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+  ['<C-f>'] = cmp.mapping.scroll_docs(4),
+  ['<C-Space>'] = cmp.mapping.complete(),
+  ['<C-e>'] = cmp.mapping.close(),
+  ['<CR>'] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace })
+}
+end
