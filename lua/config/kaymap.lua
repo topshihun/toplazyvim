@@ -17,3 +17,11 @@ map({"n", "i"}, "<C-s>", "<esc><Cmd>w<CR>", {silent = true})
 
 -- fast quit
 map("n", "<Leader>q", "<Cmd>qa<CR>", {silent = true})
+
+-- lsp
+function set_lsp_keymap(bufnr)
+  vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.definition()<CR>", { buffer = bufnr, silent = true })
+  vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { buffer = bufnr, silent = true })
+  vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { buffer = bufnr, silent = true })
+  vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", { buffer = bufnr, silent = true })
+end

@@ -4,8 +4,10 @@ if not nlsp_status then
   return
 end
 
+local lspconfig = require("lspconfig")
+
 -- typst
-require("lspconfig")["tinymist"].setup {
+lspconfig.tinymist.setup {
   settings = {
     formatterMode = "typstyle",
     semanticTokens = "disable"
@@ -17,3 +19,12 @@ require("lspconfig")["tinymist"].setup {
 
 -- verilog/systemverilog
 -- require("lspconfig")["svls"].setup {}
+
+lspconfig.rust_analyzer.setup {
+  on_attach = function(client, bufnr)
+    set_lsp_keymap(bufnr)
+  end,
+  settings = {
+    ['rust-analyzer'] = {},
+  },
+}
