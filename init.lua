@@ -2,6 +2,8 @@ require("config.kaymap")
 require("config.lazy")
 require("config.lsp")
 
+require("plugins-config/nvim-treesitter")
+
 -- 编码方式 utf8
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
