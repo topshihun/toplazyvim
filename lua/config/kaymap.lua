@@ -38,3 +38,7 @@ return {
   ['<CR>'] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace })
 }
 end
+
+-- bufferline
+map("n", "<S-l>", "<Cmd>BufferLineCycleNext<CR>", opt)
+map("n", "<S-h>", "<Cmd>BufferLineCyclePrev<CR>", opt)
