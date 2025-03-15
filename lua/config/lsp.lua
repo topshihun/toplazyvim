@@ -8,7 +8,7 @@ end
 --nvim-cmp
 local status, cmp = pcall(require, "cmp")
 if not status then
-    vim.notify("找不到 cmp")
+    vim.notify("don't find cmp")
     return
 end
 
