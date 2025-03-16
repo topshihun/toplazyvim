@@ -6,7 +6,7 @@ end
 
 treesitter.setup({
   ensure_installed = { "rust", "lua", "verilog", "python", "markdown",
-                       "typst", "make", "kconfig", "cpp" },
+                       "typst", "make", "kconfig", "cpp", "c" },
   sync_install = true,
   auto_install = true,
   highlight = {
