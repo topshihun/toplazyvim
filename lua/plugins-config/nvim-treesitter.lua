@@ -5,7 +5,8 @@ if not status then
 end
 
 treesitter.setup({
-  ensure_installed = { "rust", "lua", "verilog", "python", "markdown", "typst" },
+  ensure_installed = { "rust", "lua", "verilog", "python", "markdown",
+                       "typst", "make", "kconfig", "cpp" },
   sync_install = true,
   auto_install = true,
   highlight = {
