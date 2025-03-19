@@ -1,4 +1,2 @@
 typst: tinymist
-clangd: c/c++
-svls: verilog/systemverilog
 rust-analyzer: rust

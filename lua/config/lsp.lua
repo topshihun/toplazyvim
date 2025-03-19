@@ -37,12 +37,6 @@ lspconfig.tinymist.setup {
   }
 }
 
--- c/c++
--- require("lspconfig")["clangd"].setup {}
-
--- verilog/systemverilog
--- require("lspconfig")["svls"].setup {}
-
 lspconfig.rust_analyzer.setup {
   on_attach = function(client, bufnr)
     set_lsp_keymap(bufnr)
