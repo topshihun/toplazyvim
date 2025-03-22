@@ -42,7 +42,7 @@ end
 -- bufferline
 map("n", "<S-l>", "<Cmd>BufferLineCycleNext<CR>", opt)
 map("n", "<S-h>", "<Cmd>BufferLineCyclePrev<CR>", opt)
-map("n", "<Leader>bd", "<Cmd>BufferLineCyclePrev<CR><Cmd>BufferLineCloseRight<CR>", opt)
+map("n", "<Leader>bd", "<Cmd>bd<CR><Cmd>b<CR>", opt)
 
 -- lazygit
 map("n", "<leader>lg", "<Cmd>LazyGit<CR>", {desc = "LazyGit"})
