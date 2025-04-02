@@ -4,6 +4,7 @@ require("config.lsp")
 
 require("plugins-config/nvim-treesitter")
 require("plugins-config/bufferline")
+require("plugins-config/wf")
 
 -- 编码方式 utf8
 vim.g.encoding = "UTF-8"
