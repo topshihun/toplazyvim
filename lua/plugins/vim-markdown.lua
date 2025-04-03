@@ -1,5 +1,6 @@
 return {
   "tpope/vim-markdown",
+  lazy = true,
   config = function()
     -- tpope/vim-markdown
     vim.g.markdown_syntax_conceal = 0

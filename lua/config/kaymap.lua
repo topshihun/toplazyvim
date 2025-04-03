@@ -1,6 +1,3 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 local map = vim.keymap.set
 local opt = {noremap = true, silent = true }
 local wk = require("which-key")
