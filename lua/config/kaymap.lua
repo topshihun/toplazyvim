@@ -3,6 +3,22 @@ vim.g.maplocalleader = " "
 
 local map = vim.keymap.set
 local opt = {noremap = true, silent = true }
+local wk = require("which-key")
+
+wk.add({
+  {"<Leader>?",
+  function()
+    require("which-key").show({ global = false })
+  end,
+  desc = "Buffer Local Keymaps (which-key)", mode = "n"},
+
+  -- fast quit
+  {"<Leader>q", "<Cmd>qa<CR>", mode = "n", desc = "close all"},
+
+  -- lazy
+  {"<Leader>l", group = "lazy"},
+  {"<Leader>lg", "<Cmd>LazyGit<CR>", desc = "lazygit", mode = "n"},
+})
 
 map("n", "<C-h>", "<C-w>h", opt)
 map("n", "<C-j>", "<C-w>j", opt)
@@ -11,12 +27,6 @@ map("n", "<C-l>", "<C-w>l", opt)
 
 -- fast sava
 map({"n", "i"}, "<C-s>", "<esc><Cmd>w<CR>", {silent = true})
-
--- nvimtree
--- map({"n", "i"}, "<Tab>", "<Cmd>NvimTreeToggle<CR>", opt)
-
--- fast quit
-map("n", "<Leader>q", "<Cmd>qa<CR>", {silent = true})
 
 -- lsp
 function set_lsp_keymap(bufnr)
@@ -43,6 +53,3 @@ end
 map("n", "<S-l>", "<Cmd>BufferLineCycleNext<CR>", opt)
 map("n", "<S-h>", "<Cmd>BufferLineCyclePrev<CR>", opt)
 map("n", "<Leader>bd", "<Cmd>bd<CR><Cmd>b<CR>", opt)
-
--- lazygit
-map("n", "<leader>lg", "<Cmd>LazyGit<CR>", {desc = "LazyGit"})

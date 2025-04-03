@@ -1,10 +1,9 @@
-require("config.kaymap")
 require("config.lazy")
+require("config.kaymap")
 require("config.lsp")
 
 require("plugins-config/nvim-treesitter")
 require("plugins-config/bufferline")
-require("plugins-config/wf")
 
 -- 编码方式 utf8
 vim.g.encoding = "UTF-8"
@@ -64,8 +63,6 @@ vim.o.swapfile = false
 -- smaller updatetime
 vim.o.updatetime = 300
 
-vim.o.timeoutlen = 500
-
 vim.o.splitbelow = true
 vim.o.splitright = true
 -- 自动补全不自动选中
@@ -83,4 +80,7 @@ vim.o.wildmenu = true
 vim.o.shortmess = vim.o.shortmess .. "c"
 -- 补全显示10行
 vim.o.pumheight = 10
+-- clipboard
 vim.o.clipboard = "unnamedplus"
+
+vim.o.guifont = "JetBrainsMono Nerd Font"
