@@ -15,6 +15,15 @@ wk.add({
   -- lazy
   {"<Leader>l", group = "lazy"},
   {"<Leader>lg", "<Cmd>LazyGit<CR>", desc = "lazygit", mode = "n"},
+
+  -- split
+  {"<Leader>s", group = "split"},
+  {"<Leader>sh", "<Cmd>split<CR>", desc = "split horizontal", mode = "n"},
+  {"<Leader>sv", "<Cmd>vsplit<CR>", desc = "split vertical", mode = "n"},
+
+  -- window
+  {"<Leader>w", group = "window"},
+  {"<Leader>wq", "<Cmd>q<CR>", desc = "window left", mode = "n"},
 })
 
 map("n", "<C-h>", "<C-w>h", opt)
